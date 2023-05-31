@@ -1,0 +1,26 @@
+color pallet:
+https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
+https://coolors.co/8ecae6-219ebc-023047-ffb703-fb8500
+
+for typing animation:
+https://github.com/mattboldt/typed.js/
+
+animation on scroll
+https://www.youtube.com/watch?v=0kmFlBJIUkQ
+http://michalsnik.github.io/aos/
+
+
+slider libaries
+https://www.youtube.com/watch?v=k_fXWA8fY6Q
+
+
+ion icon used for icon
+https://github.com/ionic-team/ionicons
+https://ionic.io/ionicons/usage#:~:text=%3Cion-icon%20size%3D%22small%22%3E%3C%2Fion-icon%3E%20%3Cion-icon%20size%3D%22large%22%3E%3C%2Fion-icon%3E%20Or%20you%20can%20set,multiple%20of%208%20%288%2C%2016%2C%2032%2C%2064%2C%20etc.%29
+
+open tab when a tag is clicked
+https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
+
+mailto attribute to trigger an email prompt
+https://www.freecodecamp.org/news/mailto-link-how-to-make-an-html-email-link-example-code/
+https://www.w3docs.com/snippets/html/how-to-create-mailto-links.html

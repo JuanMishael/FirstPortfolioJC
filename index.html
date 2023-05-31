@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <!-- for typing animation -->
+    <script src="script.js" defer></script>
+    <!-- for animate on scroll  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- owl carousel for slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/JCLogo.png"> <!--for website favicon, by default <link rel="icon" href="data:,">-->
+    <title>John Calimoso</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="assets/JCLogo.png" id="logo" alt="Flowers in Chania" width="30px" height="30px">
+                <p id="John"> John</p><p id="Calimoso"> Calimoso</p>
+            </div>
+            <a href="#/" class="toggle_button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <ul class="navigation">
+                <li><a href="#AboutSection">About</a></li> <!-- href = idname of about section-->
+                <li><a href="#ProjectSection">Project</a></li>
+                <li><a href="#ContactSection">Contact </a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="home">
+        <div class="homeWrapper">
+            <div class="textArea" data-aos="fade-down"  data-aos-delay="300" data-aos-duration="1000" >
+                <h1>I am<br><span>John<br>Calimoso</span></h1>
+                <br>
+                <sub><span id="element"></span></sub>
+                <!-- Element to contain animated typing -->
+                <br>
+                <a href="Calimoso,John - CV.pdf"  title=""class="Btn_Resume" download>Download Resume</a>
+            </div>
+            <div class="imgArea" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <div class="imgTag"></div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="About" id="AboutSection">
+        <div class="aboutWrapper">
+            <h1 data-aos="zoom-in"  data-aos-duration="1000">About</h1>
+            <div class="AboutMeText" data-aos="zoom-in" data-aos-duration="1000">
+                I am a student from AMA Computer Science College Cavite. Throughout the years, I have developed and gained a lot of knowledge and skills with web development. 
+                Some of the skills related to computer science have been forgotten, however, I would still be willing to relearn and gain more new information if it means developing my skills further. 
+                In addition to this, I am also familiar with data science field, and know most fundamentals and have conducted data science related projects from EDA, Regressions, Classifications and etc.
+            </div>
+            <div class="AboutMeText" data-aos="zoom-in" data-aos-duration="1000">
+                As a junior developer, I believe that there are more informations that needs to be learned especially that the technologies nowadays kept developing expeditiously. 
+                Learning to adapt by any means is a catalyst of a great outcome.
+            </div>
+        </div>
+    </section>
+    <!-- Project Section -->
+    <section class="Project" id="ProjectSection">
+        <div class="projectWrapper">
+            <h1>Project</h1>
+            <!-- experiment -->
+            <div class="cardWrapper">
+                <div class="owl-carousel owl-theme" >
+                    <a href="https://github.com/JuanMishael/NBAWinPercentagePredictionUsingRegression.git">
+                        <div class="cell"  data-aos="fade-left" data-aos-duration="1000"> 
+                            <h3>NBA Win Percentage Prediction</h3> 
+                            <div class="detail">
+                                A case study about predicting NBA win percentage using machine learning algorithm called Multiple Regression.
+                                Web scraping was performed to gather the needed dataset
+                            </div>
+                            <div class="projectDetail">
+                                <sub>
+                                    <b>Development Environment:</b>
+                                    Jupyter Notebook
+                                </sub>
+                                <br>
+                                <sub>
+                                    <b>Programming Language:</b>
+                                    Python
+                                </sub>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/JuanMishael/Diabetes_Prediction_ClassificationML">
+                        <div class="cell" data-aos="fade-left" data-aos-duration="1300"> 
+                            <h3>Diabetes Prediction</h3>
+                            <div class="detail">
+                                A Machine learning case study about predicting if the patient has diabetes. Two algorithms was used in this case study,
+                                the Logistic Regression and KNN.
+                            </div>
+                            <div class="projectDetail">
+                                <sub>
+                                    <b>Development Environment:</b>
+                                    Jupyter Notebook
+                                </sub>
+                                <br>
+                                <sub>
+                                    <b>Programming Language:</b>
+                                    Python
+                                </sub>
+                            </div> 
+                        </div>
+                    </a>
+                    <a href="https://github.com/JuanMishael/FraudDetectionUsing4ClassificationML.git">
+                        <div class="cell"  data-aos="fade-left" data-aos-duration="1600"> 
+                            <h3>Fraud Classification</h3> 
+                            <div class="detail">
+                                A fraud detection machine learning model using a insurance claim dataset. Four algorithms was used, 
+                                this includes Decision Tree, KNN, Logistic Regression, and Naive Base algorithms.
+                            </div>
+                            <div class="projectDetail">
+                                <sub>
+                                    <b>Development Environment:</b>
+                                    Jupyter Notebook
+                                </sub>
+                                <br>
+                                <sub>
+                                    <b>Programming Language:</b>
+                                    Python
+                                </sub>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="skillsWrapper">
+            <h1>Skills</h1>
+        </div>
+    </section>
+    <section class="Contact" id="ContactSection">
+        <h1>Connect with me!</h1>
+        <div class="contactWrapper">
+            <a href="https://www.facebook.com/john.calimoso.96" target="_blank"> <!--The #/ will prevent the page reloading and scrolling the page to the top -->
+                    <ion-icon name="logo-facebook" size="large"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/juancalimoso/" target="_blank">
+                    <ion-icon name="logo-instagram" size="large"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/john-calimoso-148abb257/" target="_blank">
+                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
+            </a>
+            <a href="https://github.com/JuanMishael"  target="_blank">
+                    <ion-icon name="logo-github" size="large"></ion-icon>
+            </a>
+            <a href="mailto:email@example.com">
+                    <ion-icon name="mail" size="large"></ion-icon>
+            </a>
+            <a href="#/" onclick="contact()">
+                    <div class="contactnumber">+63 932 167 2656</div>
+            </a>
+        </div>
+    </section>
+</body>
+<!-- Load library from the CDN -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<!-- Setup and start animation! -->
+<script>
+var typed = new Typed('#element', {
+    strings: ["Junior Web Developer","Junior Data Scientist"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+});
+</script>
+<!-- Script for animate on scroll -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- owl carousel for slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            responsiveClass:true,
+            nav: true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items: 3,
+                    nav:true
+                },
+                1000:{
+                    items:3,
+                    nav:true,
+                    loop:true
+                }
+            }
+        });
+    });
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

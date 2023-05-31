@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* set default font */
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+body{
+  height: 100vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(139deg, rgba(255,255,255,1) 0%, rgb(240, 254, 255) 100%);
+}
+html{
+  scroll-behavior:smooth;
+  scrollbar-color: #FCA311 rgba(255, 255, 255, 0);
+}
+
+/* navigation and heading */
+.logo{
+  margin: 0 30px;
+  font-size: larger;
+}
+.logo #John{
+  color: #FCA311;
+  display: inline;
+} 
+.logo #Calimoso{
+  color: #008CBA;
+  display: inline 
+}
+li{
+  list-style:none;
+}
+a{
+  text-decoration: none;
+  color: #008CBA;
+  font-size: 1em;
+}
+a:hover{
+  color: #FCA311;
+}
+header{
+  position:relative;
+}
+.navbar{
+  position: fixed;
+  width:100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation{
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2em;
+  padding: 0 30px;
+}
+/* toggle button */
+.toggle_button{
+  position:absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle_button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* home page */
+
+.home{
+  background-image: url('assets/SunBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center; /* Center the grid items horizontally and vertically */
+}
+
+.homeWrapper{
+  display:grid;
+  grid-template-columns: 1fr  1fr;
+  column-gap: 10vw;
+  width: 50vw;
+  height: 50vh;
+}
+.textArea{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.textArea h1{
+  font-size: 5em;
+}
+.textArea span{
+  color: #219ebc;
+}
+.textArea #element{
+  font-size: 1.8em;
+  color: #023047;
+}
+.imgArea{
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 50px 10px;
+  border: 1px black solid;
+  background-color: white;
+  box-shadow: 30px 30px #fca311;
+}
+.Btn_Resume{
+  background-color: rgba(255, 255, 255, 0);  /* Green */
+  border: 2px solid #008CBA;
+  border-radius:5px;
+  color: black; 
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.Btn_Resume:hover {
+  background-color: #008CBA;
+  color: #FFFF;
+}
+
+.imgTag{
+  background-image: url('assets/profilePic.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1500px) {
+  .textArea{
+    font-size: .9rem;
+  }
+  .imgTag{
+    background-size: cover;
+  }
+}
+
+/* About Section */
+
+.About{
+  background-color: #1d1d1d;
+  color: #FFFF;
+}
+.aboutWrapper{
+  padding: 5%;
+}
+.aboutWrapper h1{
+  text-align: center;
+  font-size: 4em;
+  color: #219EBC;
+}
+.AboutMeText{
+  text-align: center;
+  font-size: 1.8em;
+  padding: 20px 20%;
+  color: #e5e5e5;
+}
+
+/* Project Section */
+.Project{
+  background-image: url('assets/BackgroundPicture2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 200vh;
+  width: 100%;
+}
+.projectWrapper{
+  padding: 5%;
+}
+.projectWrapper h1{
+  text-align: center;
+  font-size: 4em;
+  color: #219EBC;
+  margin-bottom: 20px;
+}
+/* Project slider */
+.cardWrapper{
+  padding: 0 10% 10px 10%;
+}
+.cell{
+  background-color: #FFFF;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px grey;
+  height: 350px;
+}
+.cell h3{
+  background-color: #1d1d1d;
+  color: #fca311;
+  padding: 10px;
+  font-size: 1.6em;
+  border-radius: 10px 10px 0 0 ;
+}
+.cell .detail{
+  padding: 20px;
+  font-size: 1.3em;
+  color: #023047;
+}
+.projectDetail{
+  color: #000000;
+  font-size: 1.2em;
+  position:absolute;
+  left: 20px;
+  bottom: 20px;
+
+}
+/* skills */
+.skillsWrapper{
+  padding: 5%;
+}
+.skillsWrapper h1{
+  text-align: center;
+  font-size: 4em;
+  color: #219EBC;
+  margin-bottom: 20px;
+}
+/* contact */
+.Contact{
+  padding: 5%;
+  color: white;
+  background-color: #fca311;
+}
+.Contact h1{
+  font-size: 3em;
+  text-align: center;
+}
+.contactWrapper{
+  padding: 20px 10%;
+  text-align: center;
+}
+
+ion-icon{
+  margin: 0 10px;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+ion-icon:hover{
+  color: #008CBA;
+}
+.contactnumber{
+  color: white;
+  padding: 20px 0;
+  font-size: 1.3em;
+}
+
+@media (max-width: 480px) {   /** For mobile device **/
+  /* navigation and heading */
+  .logo{
+    margin: 10px 30px;
+    font-size: larger;
+  }
+  .logo #John{
+    color: #FCA311;
+    display: inline;
+  } 
+  .logo #Calimoso{
+    color: #008CBA;
+    display: inline 
+  }
+  .toggle_button{
+    display: flex;
+  }
+  .navigation{
+    display: none;
+    width: 100%;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navigation{
+    flex-direction: column;
+    width: 100%;
+  }
+  .navigation li{
+    text-align: center;
+  }
+  .navigation li a{
+    padding: .5rem 1rem
+  }
+
+  .navigation.active{
+    display:flex;
+  }
+  .logo{
+    padding: unset;
+  }
+
+  /* home */
+  .home{
+    background-image: url('assets/SunBackground_mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center; /* Center the grid items horizontally and vertically */
+  }
+  
+  .homeWrapper{
+    display:grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 50vh;
+  }
+  .textArea{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .textArea h1{
+    font-size: 3em;
+  }
+  .textArea span{
+    color: #219ebc;
+  }
+  .textArea #element{
+    font-size: 1.2em;
+    color: #023047;
+  }
+  .imgArea{
+    display: none;
+  }
+  .Btn_Resume{
+    border-radius:5px;
+    padding: 8px 16px;
+    font-size: 15px;
+    margin: 30px 2px;
+  }
+  .Btn_Resume:hover {
+    background-color: #008CBA;
+    color: #FFFF;
+  }
+  
+  .imgTag{
+    display: none;
+  }
+  /*About*/
+  .aboutWrapper{
+    padding: 5%;
+  }
+  .aboutWrapper h1{
+    text-align: center;
+    font-size: 3em;
+    color: #219EBC;
+  }
+  .AboutMeText{
+    text-align: center;
+    font-size:  .9em;
+    padding: 20px 20px;
+    color: #e5e5e5;
+  }
+  /* Project Section */
+  .Project{
+    background-image: url('assets/BackgroundPicture2_mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    height: 200vh;
+    width: 100%;
+  }
+  .projectWrapper{
+    padding: 5%;
+  }
+  .projectWrapper h1{
+    text-align: center;
+    font-size: 3em;
+    color: #219EBC;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  .cardWrapper{
+    padding: 0 10% 10px 10%;
+  }
+  .cell{
+    background-color: #FFFF;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px grey;
+    height: 350px;
+  }
+  .cell h3{
+    background-color: #1d1d1d;
+    color: #fca311;
+    padding: 10px;
+    font-size: 1.3em;
+    border-radius: 10px 10px 0 0 ;
+  }
+  .cell .detail{
+    padding: 20px;
+    font-size: 1em;
+    color: #023047;
+  }
+  .projectDetail{
+    color: #000000;
+    font-size: 1em;
+    position:absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+  /* skills */
+.skillsWrapper{
+  padding: 5%;
+}
+.skillsWrapper h1{
+  text-align: center;
+  font-size: 3em;
+  color: #219EBC;
+  margin-bottom: 20px;
+}
+/* contact */
+.Contact{
+  padding: 5%;
+  color: white;
+  background-color: #fca311;
+}
+.Contact h1{
+  font-size: 2em;
+  text-align: center;
+}
+.contactWrapper{
+  padding: 20px 10%;
+  text-align: center;
+}
+
+ion-icon:hover{
+  color: #008CBA;
+}
+.contactnumber{
+  color: white;
+  padding: 20px 0;
+  font-size: 1em;
+}
+}
