@@ -223,14 +223,7 @@ header{
   font-size: 1.3em;
   color: #023047;
 }
-.projectDetail{
-  color: #000000;
-  font-size: 1.2em;
-  position:absolute;
-  left: 20px;
-  bottom: 20px;
 
-}
 /* skills */
 .skillsWrapper{
   padding: 5%;
