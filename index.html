@@ -2,179 +2,333 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <!-- for typing animation -->
-    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- for animate on scroll  -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- owl carousel for slider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" href="assets/JCLogo.png"> <!--for website favicon, by default <link rel="icon" href="data:,">-->
-    <title>John Calimoso</title>
+    <title>Portfolio</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="assets/JCLogo.png" id="logo" alt="Flowers in Chania" width="30px" height="30px">
-                <p id="John"> John</p><p id="Calimoso"> Calimoso</p>
-            </div>
-            <a href="#/" class="toggle_button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <ul class="navigation">
-                <li><a href="#AboutSection">About</a></li> <!-- href = idname of about section-->
-                <li><a href="#ProjectSection">Project</a></li>
-                <li><a href="#ContactSection">Contact </a></li>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <img src="assets/Double Ring-1s-200px.svg" alt="Loading Animation">
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="contentWrapper">
+    <!--Navbar-->
+    <nav class="navbar navbar-dark" style="background-color: #1E1E1E;">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">
+            <img src="assets/JCLogo.png" alt="MyLogo" width="25" height="25">
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutsection">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projectsection">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactsection">Contact</a>
+                </li>
             </ul>
         </div>
-    </header>
-    <section class="home">
-        <div class="homeWrapper">
-            <div class="textArea" data-aos="fade-down"  data-aos-delay="300" data-aos-duration="1000" >
-                <h1>Hi! Im<br><span>John<br>Calimoso</span></h1>
-                <br>
-                <sub><span id="element"></span></sub>
-                <!-- Element to contain animated typing -->
-                <br>
-                <a href="Calimoso,John - CV.pdf"  title=""class="Btn_Resume" download>Download Resume</a>
+        <!-- Collapsible content -->
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Home Page -->
+    <div class="container homeContent">
+    <div class="greetings" 
+    data-aos="zoom-out"
+    data-aos-duration="2000"
+    >
+        <h1> Hey there,</h1>
+        <h1>I'm 
+            <span style="color: #fd8a37; font-weight: 700;">John</span>
+            <span style="color: #3cc2fb; font-weight: 700;">Calimoso</span>
+        </h1>
+        <h2>
+            An Aspiring <span id="element"></span>
+        </h2>
+        <br>
+        <a href="Calimoso,John - CV.pdf" type="button" class="btn btn-outline-secondary" download>Download Resume</a>
+    </div>
+
+    <a href="#aboutsection" style="text-decoration: none;color: inherit;" id="homeDown">
+        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="80" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
+    </a>
+    </div>
+    <!--/Home Page-->
+    <!-- about section -->
+    <section id="aboutsection" class="container-fluid aboutContainer" style="background-color: #1E1E1E;">
+        <div class="about-container">
+            <!-- Left: Image -->
+            <div class="about-image">
+                <img src="assets/CALIMOSO,JOHN MISHAEL_AMA'CAVITE'2394 CHOSEN.jpg" alt="Your Image">
             </div>
-            <div class="imgArea" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                <div class="imgTag"></div>
+            <!-- Right: About and Paragraph -->
+            <div class="about-content">
+                <h1 
+                data-aos="fade-left" 
+                data-aos-duration="1500"
+                >
+                    About Me
+                </h1>
+                <p
+                data-aos="fade-left" 
+                data-aos-duration="2000"
+                >
+                I am a recent graduate with a major in Computer Science and a specialization in Data Science. 
+                My aspiration is to become a Full Stack Developer and a Data Scientist, and I am eager to apply the skills 
+                I've acquired to contribute to innovative projects in the industry. 
+                I am committed to continuous learning and growth through the diverse experiences I encounter at every step.
+                </p>
             </div>
         </div>
     </section>
-    <!-- About Section -->
-    <section class="About" id="AboutSection">
-        <div class="aboutWrapper">
-            <h1 data-aos="zoom-in"  data-aos-duration="1000">About</h1>
-            <div class="AboutMeText" data-aos="zoom-in" data-aos-duration="1000">
-                I am a student from AMA Computer Science College Cavite. Throughout the years, I have developed and gained a lot of knowledge and skills with web development. 
-                Some of the skills related to computer science have been forgotten, however, I would still be willing to relearn and gain more new information if it means developing my skills further. 
-                In addition to this, I am also familiar with data science field, and know most fundamentals and have conducted data science related projects from EDA, Regressions, Classifications and etc.
-            </div>
-            <div class="AboutMeText" data-aos="zoom-in" data-aos-duration="1000">
-                As a junior developer, I believe that there are more informations that needs to be learned especially that the technologies nowadays kept developing expeditiously. 
-                Learning to adapt by any means is a catalyst of a great outcome.
-            </div>
-        </div>
-    </section>
-    <!-- Project Section -->
-    <section class="Project" id="ProjectSection">
-        <div class="projectWrapper">
-            <h1>Project</h1>
-            <!-- experiment -->
-            <div class="cardWrapper">
-                <div class="owl-carousel owl-theme" >
-                    <a href="https://github.com/JuanMishael/NBAWinPercentagePredictionUsingRegression.git">
-                        <div class="cell"  data-aos="fade-left" data-aos-duration="1000"> 
-                            <h3>NBA Win Percentage Prediction</h3> 
-                            <div class="detail">
-                                A case study about predicting NBA win percentage using machine learning algorithm called Multiple Regression.
-                                Web scraping was performed to gather the needed dataset
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/JuanMishael/Diabetes_Prediction_ClassificationML">
-                        <div class="cell" data-aos="fade-left" data-aos-duration="1300"> 
-                            <h3>Diabetes Prediction</h3>
-                            <div class="detail">
-                                A Machine learning case study about predicting if the patient has diabetes. Two algorithms was used in this case study,
-                                the Logistic Regression and KNN.
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/JuanMishael/FraudDetectionUsing4ClassificationML.git">
-                        <div class="cell"  data-aos="fade-left" data-aos-duration="1600"> 
-                            <h3>Fraud Classification</h3> 
-                            <div class="detail">
-                                A fraud detection machine learning model using a insurance claim dataset. Four algorithms was used, 
-                                this includes Decision Tree, KNN, Logistic Regression, and Naive Base algorithms.
-                            </div>
-                        </div>
-                    </a>
+    <!-- /about section -->
+    <!-- experience section -->
+    <section class="container-fluid experienceContainer" style="background-color: #1E1E1E;">
+        <div class="experience-container">
+            <h1>Experience</h1>
+            <div class="timeline">
+
+                <div class="timelineContainer left-container">
+                    <img src="assets/aisat.png" alt="">
+                    <div class="text-box">
+                        <h3>Asian Institute Of Science And Technology</h3>
+                        <small>2019-2020</small>
+                        <p>
+                            This is where I started my college years and chose my current degree Computer Science. 
+                        </p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+
+                <div class="timelineContainer right-container">
+                    <img src="assets/AMA.png" alt="">
+                    <div class="text-box">
+                        <h3>AMA University Cavite</h3>
+                        <small>2020</small>
+                        <p>
+                            I transfered University seeking for a much more better education but I still pursue Computer Science Studies. 
+                            AMA University is known for its computer related studies, teaching more modern and advance technology compare to the previous school.
+                        </p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+
+                <div class="timelineContainer left-container">
+                    <img src="assets/exceed.jpg" alt="">
+                    <div class="text-box">
+                        <h3>Exceed Data Science Bootcamp</h3>
+                        <small>2022-2023</small>
+                        <p>
+                            I am able to learn more about data science in this free Data Science Bootcamp headed by sir AJ Ganzon, a Data Science Lead of Exceed Philippines.
+                            They offer a practical way of teaching Data Science, from data gathering such as web scrapping or kaggle, Data Analaysis, Data Preprocessing, to Machine Learning such as 
+                            linear regression, multiple classification algorithm, Unsupervised and Supervised machine learning algorithms.
+                        </p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+
+                <div class="timelineContainer right-container">
+                    <img src="assets/APNTelecome.png" alt="">
+                    <div class="text-box">
+                        <h3>APN Philippines</h3>
+                        <small>2023</small>
+                        <p>
+                            APN Philippines is a telecome company originated in Texas, USA. They are a Premier Provider of VoIP services to the US and 
+                            all major continents around the globe. I comply my On-The-Job training here, They teach us more about the network but most of the time
+                            APN gave us developement related task such as system stress testing and developing php application.
+                        </p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+
+                <div class="timelineContainer left-container">
+                    <img src="assets/AMA.png" alt="">
+                    <div class="text-box">
+                        <h3>AMA University Cavite</h3>
+                        <small>2023</small>
+                        <p>
+                            I Graduated. Something I want to highlight here is that I am able to create an Animal Breed Identifier web and mobile application using Logistic
+                            Regression and Support Vector Machine for my Thesis Research 1 and 2.
+                        </p>
+                        <span class="left-container-arrow"></span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="skillsWrapper">
-            <h1>Skills</h1>
-        </div>
     </section>
-    <section class="Contact" id="ContactSection">
-        <h1>Connect with me!</h1>
-        <div class="contactWrapper">
-            <a href="https://www.facebook.com/john.calimoso.96" target="_blank"> <!--The #/ will prevent the page reloading and scrolling the page to the top -->
-                    <ion-icon name="logo-facebook" size="large"></ion-icon>
-            </a>
-            <a href="https://www.instagram.com/juancalimoso/" target="_blank">
-                    <ion-icon name="logo-instagram" size="large"></ion-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/john-calimoso-148abb257/" target="_blank">
-                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
-            </a>
-            <a href="https://github.com/JuanMishael"  target="_blank">
-                    <ion-icon name="logo-github" size="large"></ion-icon>
-            </a>
-            <a href="mailto:email@example.com">
-                    <ion-icon name="mail" size="large"></ion-icon>
-            </a>
-            <a href="#/" onclick="contact()">
-                    <div class="contactnumber">+63 932 167 2656</div>
-            </a>
+    <!-- projectSection -->
+    <section class="container project-container" id="projectsection">
+        <!-- Carousel -->
+        <div class="ciWrapper" data-aos="flip-up">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="">
+                    <img class="d-block w-100" src="assets/lukas-blazek-mcSDtbWXUZU-unsplash.jpg" alt="First slide">
+                    <div class="carousel-caption d-md-block" style="text-shadow: 3px 3px 3px #1e1e1e9e;">
+                        <h1 class="captionTitle">Data Science Project</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="">
+                    <img class="d-block w-100" src="assets/webdevbackground.png" alt="Second slide">
+                    <div class="carousel-caption d-md-block" style="text-shadow: 3px 3px 3px #1e1e1ecd;">
+                        <h1 class="captionTitle">Web Developement Project</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="">
+                    <img class="d-block w-100" src="assets/benjamin-sow-CB4z0uTFSYg-unsplash.jpg" alt="Third slide">
+                    <div class="carousel-caption d-md-block" style="text-shadow: 3px 3px 3px #1e1e1ecd;">
+                        <h1 class="captionTitle">Mobile Developement Project</h1>
+                    </div>
+                </a>
+            </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+        </div>
+        
+
+        <!-- /Carousel -->
     </section>
+    <!-- /projectSection -->
+
+    <!-- Footer Section -->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="Wrapper" id="contactsection">
+
+    <footer class="bg-dark text-center text-white footerCust">
+    <h1 style="color: #3cc2fb;">Connect With Me!</h1>
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/john.calimoso.96" role="button" title="Facebook"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+    
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="mailto:ichijuan08@gmail.com" role="button" title="Email"
+            ><i class="fab fa-google"></i
+            ></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/juancalimoso/" role="button" title="Instagram"
+            ><i class="fab fa-instagram"></i
+            ></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/john-calimoso-148abb257/" role="button" title="Linkedin"
+            ><i class="fab fa-linkedin-in"></i
+            ></a>
+    
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/JuanMishael" role="button" title="Github"
+            ><i class="fab fa-github"></i
+            ></a>
+
+            <!-- hugging face -->
+            <a class="btn btn-outline-light btn-floating m-1" href="https://huggingface.co/JohnCalimoso" role="button" title="Hugging Face"
+            ><i class="far fa-smile"></i>
+            </a>
+        </section>
+        <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="http://johncalimoso.me/">johncalimoso.me</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+        
+    </div>
+    <!-- End of .container -->
+
+    <!-- /Footer Section -->
+    <!-- content Wrapper -->
+    </div>
 </body>
+
+<!-- add jquery, some libraries i added uses jquery such as AOSjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!-- Load library from the CDN -->
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
 <!-- Setup and start animation! -->
 <script>
 var typed = new Typed('#element', {
-    strings: ["Junior Web Developer","Junior Data Scientist"],
+    strings: [
+        "<span style='color:#fd8a37;'>Full Stack Developer</span>",
+        "<span style='color:#3cc2fb;'>Data Scientist</span>"
+    ],
     typeSpeed: 50,
     backSpeed: 50,
     loop: true
 });
 </script>
 <!-- Script for animate on scroll -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
-</script>
-<!-- owl carousel for slider -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            responsiveClass:true,
-            nav: true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:true
-                },
-                600:{
-                    items: 3,
-                    nav:true
-                },
-                1000:{
-                    items:3,
-                    nav:true,
-                    loop:true
-                }
-            }
-        });
+    AOS.init();
+
+    // add this code to for some animation aint working sometimes --
+    let scrollRef = 0;
+    $(window).on("resize scroll", function () {
+    // increase value up to 10, then refresh AOS
+    scrollRef <= 10 ? scrollRef++ : AOS.refresh();
     });
+    // -- add this code to for some animation aint working sometimes
 </script>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+<!-- bootstrap  -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="script.js"></script>
+
 </html>

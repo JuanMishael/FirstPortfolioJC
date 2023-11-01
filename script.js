@@ -1,15 +1,10 @@
-const toggleButton = document.getElementsByClassName('toggle_button')[0]
-const navbarLinks = document.getElementsByClassName('navigation')[0]
+// For loading screen
+window.addEventListener("load", function() {
+    // this event listener trigger when the entire page, including all the assets is loaded
+    const loader = document.querySelector('.loader');
+    const contentWrapper = document.querySelector('.contentWrapper');
 
-toggleButton.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active')
+    // this will hide the loading screen and shot the content
+    loader.style.display = 'none';
+    contentWrapper.style.display = 'block';
 })
-
-// this  function will make the icon to copyy the address when clicked
-
-function contact(){
-    navigator.clipboard.writeText('+639381672656');
-
-    // Alert
-    alert('Copied to clipboard')
-}

@@ -1,458 +1,388 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* set default font */
-    font-family: 'Roboto Condensed', sans-serif;
+    html{
+        scroll-behavior: smooth;
+    }
+    body, html {
+        height: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-}
-body{
-  height: 100vh;
-  background: rgb(255,255,255);
-  background: linear-gradient(139deg, rgba(255,255,255,1) 0%, rgb(240, 254, 255) 100%);
-}
-html{
-  scroll-behavior:smooth;
-  scrollbar-color: #FCA311 rgba(255, 255, 255, 0);
-}
+    .navbar.navbar-1 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+    }
+    .navbar.navbar-2 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+    }
+    .navbar.navbar-3 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger1.svg?color=6a1b9a');
+    }
+    .navbar.navbar-4 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=BFE100');
+    }
+    .navbar.navbar-5 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger5.svg?color=f3e5f5');
+    }
+    .navbar.navbar-6 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=E3005C');
+    }
+    .navbar.navbar-7 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger9.svg?color=FF2C00');
+    }
+    .navbar.navbar-8 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=1729B0');
+    }
+    .navbar.navbar-9 .navbar-toggler-icon {
+        background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
+    }
 
-/* navigation and heading */
-.logo{
-  margin: 0 30px;
-  font-size: larger;
-}
-.logo #John{
-  color: #FCA311;
-  display: inline;
-} 
-.logo #Calimoso{
-  color: #008CBA;
-  display: inline 
-}
-li{
-  list-style:none;
-}
-a{
-  text-decoration: none;
-  color: #008CBA;
-  font-size: 1em;
-}
-a:hover{
-  color: #FCA311;
-}
-header{
-  position:relative;
-}
-.navbar{
-  position: fixed;
-  width:100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navigation{
-  display: flex;
-  gap: 2rem;
-  font-size: 1.2em;
-  padding: 0 30px;
-}
-/* toggle button */
-.toggle_button{
-  position:absolute;
-  top: .75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-.toggle_button .bar{
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  border-radius: 10px;
-}
+    body{
+        background-image: url("assets/white-plain-concrete-textured-background.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    /* Mobile View*/
 
-/* home page */
+    /* loading screen */
+    .loader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1F2F3;
+        z-index: 99999; /* ensure the top item is at the front of all content*/
+    }
+    .contentWrapper{
+        display: none;
+    }
 
-.home{
-  background-image: url('assets/SunBackground.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  place-items: center; /* Center the grid items horizontally and vertically */
-}
+    .navbar{
+        padding-left: 10px; /* Adjust the value as needed */
+        padding-right: 10px;
+    }
 
-.homeWrapper{
-  display:grid;
-  grid-template-columns: 1fr  1fr;
-  column-gap: 10vw;
-  width: 50vw;
-  height: 50vh;
-}
-.textArea{
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.2rem;
-}
-.textArea h1{
-  font-size: 5em;
-}
-.textArea span{
-  color: #219ebc;
-}
-.textArea #element{
-  font-size: 1.8em;
-  color: #023047;
-}
-.imgArea{
-  width: 100%;
-  height: 100%;
-  padding: 10px 10px 50px 10px;
-  border: 1px black solid;
-  background-color: white;
-  box-shadow: 30px 30px #fca311;
-}
-.Btn_Resume{
-  background-color: rgba(255, 255, 255, 0);  /* Green */
-  border: 2px solid #008CBA;
-  border-radius:5px;
-  color: black; 
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.Btn_Resume:hover {
-  background-color: #008CBA;
-  color: #FFFF;
-}
+    /* Experience Section */
+    .experienceContainer{
+        display:none;
+    }
+    /* Home Section */
+    .homeContent{
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 100%;
+    }
+    .greetings h1{
+        font-size: 3em;
+    }
+    .greetings h2{
+        font-weight: 400;
+        font-style: italic;
+    }
+    .greetings{
+        margin-bottom: 40%;
+    }
+    /* about section */
 
-.imgTag{
-  background-image: url('assets/profilePic.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-}
+    .aboutContainer{
+        padding: 20% 10%; 
+    }
+    .about-container {
+        display: flex; 
+        align-items:flex-start;
+        flex-direction: column;
+    }
 
-@media (max-width: 1500px) {
-  .textArea{
-    font-size: .9rem;
-  }
-  .imgTag{
-    background-size: cover;
-  }
-}
+    /* Style for the left image */
+    .about-image {
+        flex: 1; /* Take up 1/3 of the available space */
+        padding: 20px; /* Add spacing around the image */
+        display: none;
+    }
 
-/* About Section */
+    /* Style for the right content */
+    .about-content {
+        flex: 2; /* Take up 2/3 of the available space */
+        padding: 20px; /* Add spacing around the content */
+        align-items: flex-start;
+    }
+    .about-content h1{
+        color: #3cc2fb;
+        font-size: 3em;
+    }
+    .about-content p{
+        color: white;
+        font-size: .9em;
+        font-weight: 200;
+    }
+    .about-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the div */
+    }
 
-.About{
-  background-color: #1d1d1d;
-  color: #FFFF;
-}
-.aboutWrapper{
-  padding: 5%;
-}
-.aboutWrapper h1{
-  text-align: center;
-  font-size: 4em;
-  color: #219EBC;
-}
-.AboutMeText{
-  text-align: center;
-  font-size: 1.8em;
-  padding: 20px 20%;
-  color: #e5e5e5;
-}
+    /* Project Section*/
+    .project-container{
+        padding: 0;
+        height:fit-content;
+    }
+    .carousel-caption {
+        display: block
+    }
+    .captionTitle{
+        font-weight: 200;
+        font-size: 1.5em;
+    }
 
-/* Project Section */
-.Project{
-  background-image: url('assets/BackgroundPicture2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 200vh;
-  width: 100%;
-}
-.projectWrapper{
-  padding: 5%;
-}
-.projectWrapper h1{
-  text-align: center;
-  font-size: 4em;
-  color: #219EBC;
-  margin-bottom: 20px;
-}
-/* Project slider */
-.cardWrapper{
-  padding: 0 10% 10px 10%;
-}
-.cell{
-  background-color: #FFFF;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px grey;
-  height: 350px;
-}
-.cell h3{
-  background-color: #1d1d1d;
-  color: #fca311;
-  padding: 10px;
-  font-size: 1.6em;
-  border-radius: 10px 10px 0 0 ;
-}
-.cell .detail{
-  padding: 20px;
-  font-size: 1.3em;
-  color: #023047;
-}
+    /* Footer */
 
-/* skills */
-.skillsWrapper{
-  padding: 5%;
-}
-.skillsWrapper h1{
-  text-align: center;
-  font-size: 4em;
-  color: #219EBC;
-  margin-bottom: 20px;
-}
-/* contact */
-.Contact{
-  padding: 5%;
-  color: white;
-  background-color: #fca311;
-}
-.Contact h1{
-  font-size: 3em;
-  text-align: center;
-}
-.contactWrapper{
-  padding: 20px 10%;
-  text-align: center;
-}
+    .footerCust{
+        padding-top: 20px;
+    }
+    .footerCust h1{
+        font-size: 2em;
+    }
+    /* Project Section*/
 
-ion-icon{
-  margin: 0 10px;
-  color: #FFFFFF;
-  pointer-events: none;
-}
-ion-icon:hover{
-  color: #008CBA;
-}
-.contactnumber{
-  color: white;
-  padding: 20px 0;
-  font-size: 1.3em;
-}
+    /* Desktop view */
+    @media(min-width: 768px) {
+        /* loading screen */
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F1F2F3;
+            z-index: 99999; /* ensure the top item is at the front of all content*/
+        }
+        .contentWrapper{
+            display: none;
+        }
 
-@media (max-width: 480px) {   /** For mobile device **/
-  /* navigation and heading */
-  .logo{
-    margin: 10px 30px;
-    font-size: larger;
-  }
-  .logo #John{
-    color: #FCA311;
-    display: inline;
-  } 
-  .logo #Calimoso{
-    color: #008CBA;
-    display: inline 
-  }
-  .toggle_button{
-    display: flex;
-  }
-  .navigation{
-    display: none;
-    width: 100%;
-  }
-  .navbar{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navigation{
-    flex-direction: column;
-    width: 100%;
-  }
-  .navigation li{
-    text-align: center;
-  }
-  .navigation li a{
-    padding: .5rem 1rem
-  }
+        .navbar{
+            padding-left: 20%; /* Adjust the value as needed */
+            padding-right: 20%;
+        }
 
-  .navigation.active{
-    display:flex;
-  }
-  .logo{
-    padding: unset;
-  }
+        /* Home Section */
+        .homeContent{
+            padding-top: 10%;
+            padding-left: 10%;
+            padding-right: 10%;
+            height: 100%;
+        }
+        .greetings h1{
+            font-size: 5em;
+        }
+        .greetings h2{
+            font-weight: 400;
+            font-style: italic;
+        }
+        .greetings{
+            margin-bottom: 20%;
+        }
+        /* about section */
 
-  /* home */
-  .home{
-    background-image: url('assets/SunBackground_mobile.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    place-items: center; /* Center the grid items horizontally and vertically */
-  }
-  
-  .homeWrapper{
-    display:grid;
-    grid-template-columns: 1fr;
-    width: 100vw;
-    height: 50vh;
-  }
-  .textArea{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  .textArea h1{
-    font-size: 3em;
-  }
-  .textArea span{
-    color: #219ebc;
-  }
-  .textArea #element{
-    font-size: 1.2em;
-    color: #023047;
-  }
-  .imgArea{
-    display: none;
-  }
-  .Btn_Resume{
-    border-radius:5px;
-    padding: 8px 16px;
-    font-size: 15px;
-    margin: 30px 2px;
-  }
-  .Btn_Resume:hover {
-    background-color: #008CBA;
-    color: #FFFF;
-  }
-  
-  .imgTag{
-    display: none;
-  }
-  /*About*/
-  .aboutWrapper{
-    padding: 5%;
-  }
-  .aboutWrapper h1{
-    text-align: center;
-    font-size: 3em;
-    color: #219EBC;
-  }
-  .AboutMeText{
-    text-align: center;
-    font-size:  .9em;
-    padding: 20px 20px;
-    color: #e5e5e5;
-  }
-  /* Project Section */
-  .Project{
-    background-image: url('assets/BackgroundPicture2_mobile.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    height: 200vh;
-    width: 100%;
-  }
-  .projectWrapper{
-    padding: 5%;
-  }
-  .projectWrapper h1{
-    text-align: center;
-    font-size: 3em;
-    color: #219EBC;
-    margin-bottom: 20px;
-    margin-top: 30px;
-  }
-  .cardWrapper{
-    padding: 0 10% 10px 10%;
-  }
-  .cell{
-    background-color: #FFFF;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px grey;
-    height: 350px;
-  }
-  .cell h3{
-    background-color: #1d1d1d;
-    color: #fca311;
-    padding: 10px;
-    font-size: 1.3em;
-    border-radius: 10px 10px 0 0 ;
-  }
-  .cell .detail{
-    padding: 20px;
-    font-size: 1em;
-    color: #023047;
-  }
-  .projectDetail{
-    color: #000000;
-    font-size: 1em;
-    position:absolute;
-    left: 20px;
-    bottom: 20px;
-  }
-  /* skills */
-.skillsWrapper{
-  padding: 5%;
-}
-.skillsWrapper h1{
-  text-align: center;
-  font-size: 3em;
-  color: #219EBC;
-  margin-bottom: 20px;
-}
-/* contact */
-.Contact{
-  padding: 5%;
-  color: white;
-  background-color: #fca311;
-}
-.Contact h1{
-  font-size: 2em;
-  text-align: center;
-}
-.contactWrapper{
-  padding: 20px 10%;
-  text-align: center;
-}
+        .aboutContainer{
+            padding: 5% 20%; 
+        }
+        .about-container {
+            display: flex; 
+            align-items: flex-start;
+            flex-direction: row;
+        }
 
-ion-icon:hover{
-  color: #008CBA;
-}
-.contactnumber{
-  color: white;
-  padding: 20px 0;
-  font-size: 1em;
-}
-}
+        /* Style for the left image */
+        .about-image {
+            flex: 1; /* Take up 1/3 of the available space */
+            padding: 20px; /* Add spacing around the image */
+            display:block;
+        }
+
+        /* Style for the right content */
+        .about-content {
+            flex: 2; /* Take up 2/3 of the available space */
+            padding: 20px; /* Add spacing around the content */
+            align-items: flex-start;
+        }
+        .about-content h1{
+            color: #3cc2fb;
+            font-size: 4em;
+        }
+        .about-content p{
+            color: white;
+            font-size: 1.4em;
+            font-weight: 200;
+        }
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover the div */
+        }
+
+        /* Experience */
+        .experienceContainer{
+            display: block;
+            padding-bottom: 5%;
+        }
+        .experience-container h1{
+            font-size: 3em;
+            color: #fd8a37;
+            text-align: center;
+            font-weight:500;
+        }
+        .timeline{
+            position: relative;
+            max-width: 1200;
+            margin: 100px auto;
+        }
+        .timelineContainer{
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+            z-index: 1; /* so that the line wont overlap*/
+        }
+
+        @keyframes movedown{
+            0%{
+                opacity: 1;
+                transform: translateY(-30px)
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px)
+            }
+        }
+
+        /* depending on how many the timelinecontainers you have to manually adjust the delay */
+        .timelineContainer:nth-child(1){
+            animation-delay: 0s;
+        }
+        .timelineContainer:nth-child(2){
+            animation-delay: 1s;
+        }
+        .timelineContainer:nth-child(3){
+            animation-delay: 2s;
+        }
+        .timelineContainer:nth-child(4){
+            animation-delay: 3s;
+        }
+        .timelineContainer:nth-child(5){
+            animation-delay: 4s;
+        }
+
+
+        .text-box{
+            padding: 20px 30px;
+            background: #fff;
+            position: relative;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .text-box h3{
+            font-weight: 600;
+        }
+        .text-box small{
+            display: inline-block;
+            margin: 15px 0;
+        }
+        .left-container{
+            left: 0;
+        }
+        .right-container{
+            left: 50%;
+        }
+        .timelineContainer img{
+            border-radius: 50%;
+            position: absolute ;
+            width:  40px;
+            right:-20px;
+            top: 32px;
+            z-index: 10;
+
+        }
+        .right-container img{
+            left: -20px
+        }
+        .timeline::after{
+            content:'';
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background: #fff;
+            top: 0;
+            left: 50%;
+            margin-left:-3px;
+            z-index: 0;
+            animation: moveline 5s linear forwards;
+        }
+
+        @keyframes moveline{
+            0%{
+                height: 0;
+            }
+            100%{
+                height: 100%;
+            }
+        }
+
+        .left-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid #fff;
+            right: -15px;
+
+        }
+        .right-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid #fff;
+            left: -15px;
+        }
+
+        /* Project Section*/
+        .project-container{
+            padding: 5%;
+            height: 100vh;
+        }
+        .captionTitle{
+            font-weight: 200;
+            font-size: 3em;
+        }
+
+        /* Footer */
+        .footerCust{
+            padding-top: 30px;
+        }
+        .footerCust h1{
+            font-size: 2.5em;
+        }
+
+        /* Project Section*/
+    }
